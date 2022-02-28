@@ -8,7 +8,7 @@ BaseSceneWithMenu has the IP Address keypad and menu as shown in this [video](ht
 # Adding NumberPad and Menu to your own project
 ## Packages and Assets
 
-From this project, copy the folders called Prefabs and Scripts into your Unity project. Make sure you have the following MRTK and Unity Robotics Hub packages installed 
+From this project, copy the folders called Prefabs and Scripts into your Unity project. Make sure you have the following MRTK and Unity Robotics Hub packages installed:
 
 * Mixed Reality Toolkit Examples
 * Mixed Reality Toolkit Extensions
