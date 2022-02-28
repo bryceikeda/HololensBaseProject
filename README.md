@@ -30,7 +30,7 @@ Add the following prefabs to your scene hierarchy. If you don't see the Resource
 ### Add scripts to scene 
 Go to the ROSConnectionPrefab and add the ConnectIP script component. 
 
-![image](https://user-images.githubusercontent.com/56240638/156015290-f2f98932-50b1-4749-acc7-8af6c834b60a.png)
+![image](https://user-images.githubusercontent.com/56240638/156018259-9a7dcb9f-5a33-4461-9e37-196fa5b9c8f8.png)
 
 Then go to the NearMenu3x1 game object and navigate to SetIP. In there, add the ROSConnectionPrefab to the SetIPButtonText script. Then at Basic Events, add an On Click() event and add the NumberPad game object. Then click on the GameObject.SetActive function and make sure the box is checked below it
 
