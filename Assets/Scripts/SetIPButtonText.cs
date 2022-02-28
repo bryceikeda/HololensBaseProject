@@ -30,7 +30,6 @@ public class SetIPButtonText : MonoBehaviour
         // If someone inputs a new ip address and presses enter, check if it connects successfully
         if (!checkedOnce && ros.HasConnectionThread && !ros.HasConnectionError)
         {
-            previouslyNoConnectionError = true; 
             checkedOnce = true;
             ConnectSuccess();
         }
