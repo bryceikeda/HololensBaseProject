@@ -28,7 +28,7 @@ Add the following prefabs to your scene hierarchy. If you don't see the Resource
 ## Add Connect IP Script
 Go to the ROSConnectionPrefab and add the ConnectIP script component. 
 
-<img src="https://user-images.githubusercontent.com/56240638/156018727-c18bd2aa-91f1-46fb-8bbe-626e9af32092.png" alt="drawing" style="width:200px;"/>
+<img src="https://user-images.githubusercontent.com/56240638/156018727-c18bd2aa-91f1-46fb-8bbe-626e9af32092.png" alt="drawing" style="width:600px;"/>
 
 ## Update SetIP game object components
 
