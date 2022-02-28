@@ -1,5 +1,5 @@
 # Overview
-This project provides two scene. If you would like to start with a scene that has everything set up for building a project for the HoloLens 2, then choose either BaseScene or BaseSceneWithMenu. 
+This project provides two scenes. If you would like to start with a scene that has everything set up for building a project for the HoloLens 2, then choose either BaseScene or BaseSceneWithMenu. 
 
 BaseSceneWithMenu has the IP Address keypad and menu as shown in this [video](https://unity3d.com/get-unity/download). If you would like to add the Keypad and Menu to your own project, follow the directions below. 
 
