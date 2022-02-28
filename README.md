@@ -15,7 +15,7 @@ From this project, copy the folders called Prefabs and Scripts into your Unity p
 * Mixed Reality Toolkit Foundation
 * Mixed Reality Toolkit Standard Assets
 * Mixed Reality OpenXR Plugin
-* Unity Robotics Hub TCP Connector
+* Unity Robotics Hub TCP Connector (currently using v0.7.0)
 
 ## Add prefabs to scene 
 Add the following prefabs to your scene hierarchy. If you don't see the Resources folder with ROSConnectionPrefab then go up to the Robotics Tab, then click ROS Settings. This will automatically add the Resources folder for you. 
