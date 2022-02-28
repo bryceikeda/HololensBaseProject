@@ -6,10 +6,8 @@ Base project for Unity Robotics Hub Applications along with the IP address menu
 
 ![image](https://user-images.githubusercontent.com/56240638/156014668-4eb35442-252f-4bfa-acb1-e8abdb1bdaa4.png)
 
+![image](https://user-images.githubusercontent.com/56240638/156015290-f2f98932-50b1-4749-acc7-8af6c834b60a.png)
 
-![image](https://user-images.githubusercontent.com/56240638/156014915-5a590bb6-3eb6-4bb9-814b-83d323799a73.png)
+![image](https://user-images.githubusercontent.com/56240638/156015325-a13a8e02-1aaf-4238-b9d2-c03faebc4887.png)
 
-
-![image](https://user-images.githubusercontent.com/56240638/156014982-1f52b411-e8c8-48d9-8af6-a39fac06cd63.png)
-
-![image](https://user-images.githubusercontent.com/56240638/156015054-0f25cc44-b525-45df-bd03-e45694ca6143.png)
+![image](https://user-images.githubusercontent.com/56240638/156015365-b3387d75-f317-48ed-a9cf-49010557f5ea.png)
