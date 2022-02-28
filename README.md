@@ -34,11 +34,13 @@ Go to the ROSConnectionPrefab and add the ConnectIP script component.
 
 Then go to the NearMenu3x1 game object and navigate to SetIP. In there, add the ROSConnectionPrefab to the SetIPButtonText script. Then at Basic Events, add an On Click() event and add the NumberPad game object. Then click on the GameObject.SetActive function and make sure the box is checked below it
 
-![image](https://user-images.githubusercontent.com/56240638/156018975-a2ce2b9d-2edf-4b8d-88bd-8dbae6a8348f.png)
+
+<img src="https://user-images.githubusercontent.com/56240638/156018975-a2ce2b9d-2edf-4b8d-88bd-8dbae6a8348f.png" alt="drawing" style="width:800px;"/>
 
 ## Add components to Number Pad Input Script
 Lastly, in the NumberPad game object, go to InputField and drag the ROSConnectionPrefab to the Ros and ConnectIP sections of the Number Pad Input component. Lastly, drag the SetIP button from the previous step to the last input. 
 
-![image](https://user-images.githubusercontent.com/56240638/156019069-90d01b3f-9ebd-461b-80c0-0738118517d4.png)
+
+<img src="https://user-images.githubusercontent.com/56240638/156019069-90d01b3f-9ebd-461b-80c0-0738118517d4.png" alt="drawing" style="width:800px;"/>
 
 From here you should be good to go! You can click on Robotics->ROS Settings and toggle the Connect on Startup or change the default ROS IP Address before uploading this build to a Hololens 2. 
