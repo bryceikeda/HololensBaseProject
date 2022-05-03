@@ -1,6 +1,8 @@
 # Overview
 This project provides two scenes. If you would like to start with a scene that has everything set up for building a project for the HoloLens 2, then choose either BaseScene or BaseSceneWithMenu. 
 
+Side Note: This also contains the scene called WSL2TestScene for testing the connection between WSL2 and the HoloLens.
+
 BaseSceneWithMenu has the IP Address keypad and menu as shown in this [video](https://youtu.be/kmEVIafkqgM). If you would like to add the Keypad and Menu to your own project, follow the directions below. 
 
 ![image](https://user-images.githubusercontent.com/56240638/156014478-0d91fe8c-5566-4ca9-ba6c-34011e104e39.png)
