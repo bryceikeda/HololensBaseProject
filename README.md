@@ -43,3 +43,10 @@ Lastly, in the NumberPad game object, go to InputField and drag the ROSConnectio
 <img src="https://user-images.githubusercontent.com/56240638/156019069-90d01b3f-9ebd-461b-80c0-0738118517d4.png" alt="drawing" style="width:750px;"/>
 
 From here you should be good to go! You can click on Robotics->ROS Settings and toggle the Connect on Startup or change the default ROS IP Address before uploading this build to a Hololens 2. 
+
+## Add to your own project
+In case you add this to your own project, I realized the numbers on the number pad game object won't be linked correctly. So for the final step, you will need to go into each button, drag the InputField gameobject into the on click event for each button. Then assign NumberPadInput.KeyPress and then type the corresponding number. For Enter, Clear and Backspace, there is a special NumberPadInput.Function() for that. 
+
+<img src="https://user-images.githubusercontent.com/56240638/166501150-5b11f819-c5db-4aef-a651-fcf26f0959f0.png" alt="drawing" style="width:750px;"/>
+
+
