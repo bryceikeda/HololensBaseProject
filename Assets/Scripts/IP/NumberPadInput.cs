@@ -1,27 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using Unity.Robotics.ROSTCPConnector;
-using System; 
+
 
 public class NumberPadInput : MonoBehaviour
 {
+    [SerializeField] SetIPButtonText setIPButtonText;
+
     private static NumberPadInput _instance;
     public static NumberPadInput Instance { get { return _instance; } }
 
-    private TextMeshPro inputField;
-
-    [SerializeField]
     string ipAddress;
-
-    // ROS Connector
-    [SerializeField]
+    TextMeshPro inputField;
     ROSConnection m_Ros;
-
-    public ConnectIP connectIP;
-    public SetIPButtonText setIPButtonText;
-
+    ConnectIP connectIP;
+    
     private void OnValidate()
     {
         connectIP = GetComponent<ConnectIP>();

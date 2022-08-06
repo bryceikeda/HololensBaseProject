@@ -16,7 +16,7 @@ public class SetIPButtonText : MonoBehaviour
 
     ButtonConfigHelper buttonText;
 
-    public ROSConnection m_Ros;
+    ROSConnection m_Ros;
 
     private void OnValidate()
     {

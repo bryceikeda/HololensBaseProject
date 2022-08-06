@@ -4,7 +4,7 @@ using UnityEngine;
 public class KeyFunction : MonoBehaviour
 {
     public string keyName;
-    [SerializeField] Interactable interactable;
+    Interactable interactable;
     NumberPadInput numberPadInput;
 
     private void OnValidate()
