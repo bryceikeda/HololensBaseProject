@@ -1,5 +1,5 @@
 # Overview
-This project provides two scenes. If you would like to start with a scene that has everything set up for building a project for the HoloLens 2, then choose either BaseScene or BaseSceneWithMenu. 
+This project provides a few scenes. If you would like to start with a scene that has everything set up for building a project for the HoloLens 2, then choose either BaseScene or BaseSceneWithMenu. 
 
 Side Note: This also contains the scene called WSL2TestScene for testing the connection between WSL2 and the HoloLens.
 
