@@ -43,6 +43,12 @@
         "com.unity.textmeshpro": "2.1.4"
       }
     },
+    "com.microsoft.spatialaudio.spatializer.unity": {
+      "version": "file:MixedReality/com.microsoft.spatialaudio.spatializer.unity-2.0.37.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.15.7",
       "depth": 0,

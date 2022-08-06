@@ -10,7 +10,7 @@ using Windows.Storage;
 
 public class ConnectIP : MonoBehaviour
 { 
-    ROSConnection ros;
+    ROSConnection m_Ros;
 
     // ROS Connector
     [SerializeField]
@@ -20,8 +20,8 @@ public class ConnectIP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ros = GetComponent<ROSConnection>(); 
-        rosIP = ros.RosIPAddress;
+        m_Ros = ROSConnection.GetOrCreateInstance();
+        rosIP = m_Ros.RosIPAddress;
 #if WINDOWS_UWP
         // Get IP address from localSettings
         var localSettings = ApplicationData.Current.LocalSettings;
@@ -29,17 +29,17 @@ public class ConnectIP : MonoBehaviour
             rosIP = localSettings.Values["IP"].ToString();
         }
 #endif
-        if (ros.ConnectOnStart)
+        if (m_Ros.ConnectOnStart)
         {
-            ros.Connect(rosIP, ros.RosPort);
+            m_Ros.Connect(rosIP, m_Ros.RosPort);
         }
     }
 
     public void Connect(string inputIP)
     {
-        rosIP = inputIP; 
-        ros.Disconnect();
-        ros.Connect(rosIP, ros.RosPort);
+        rosIP = inputIP;
+        m_Ros.Disconnect();
+        m_Ros.Connect(rosIP, m_Ros.RosPort);
 
 #if WINDOWS_UWP
         // Save IP address to localSettings

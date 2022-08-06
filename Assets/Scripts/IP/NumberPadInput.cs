@@ -7,40 +7,75 @@ using System;
 
 public class NumberPadInput : MonoBehaviour
 {
+    private static NumberPadInput _instance;
+    public static NumberPadInput Instance { get { return _instance; } }
+
     private TextMeshPro inputField;
 
     [SerializeField]
     string ipAddress;
-    public string IPAddress { get => ipAddress; set => ipAddress = value; }
 
     // ROS Connector
     [SerializeField]
-    ROSConnection ros;
-    public ROSConnection ROS { get => ros; set => ros = value; }
+    ROSConnection m_Ros;
 
     public ConnectIP connectIP;
-    public SetIPButtonText setIPButtonText; 
+    public SetIPButtonText setIPButtonText;
+
+    private void OnValidate()
+    {
+        connectIP = GetComponent<ConnectIP>();
+        inputField = GetComponent<TextMeshPro>();
+    }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }  
+    }
+
 
     void Start()
     {
-        inputField = GetComponent<TextMeshPro>();
-        inputField.text = ros.RosIPAddress;
-        ipAddress = ros.RosIPAddress; 
+        m_Ros = ROSConnection.GetOrCreateInstance();
+        inputField.text = m_Ros.RosIPAddress;
+        ipAddress = m_Ros.RosIPAddress; 
     }
 
-    // Update the text field
     void UpdateInputField()
     {
         inputField.text = ipAddress; 
     }
 
     // Add the key letter pressed to input
-    public void KeyPress(string key)
+    public void OnKeyPressedEvent(string key)
     {
-        if (ipAddress.Length < 20)
+        if (key.Equals("Clear"))
         {
-            ipAddress = ipAddress + key;
+            Clear(); 
+        }
+        else if (key.Equals("Enter"))
+        {
+            Enter();
+        }
+        else if (key.Equals("Backspace"))
+        {
+            Backspace(); 
+        }
+        else if (ipAddress.Length < 20)
+        {
+            ipAddress += key;
             UpdateInputField();
+        }
+        else
+        {
+            Debug.LogWarning("[NumberPadInput]: Invalid name of key pressed " + key);
         }
     }
 
@@ -58,7 +93,6 @@ public class NumberPadInput : MonoBehaviour
         {
             ipAddress = ipAddress.Remove(ipAddress.Length - 1, 1);
         }
-        
         UpdateInputField();
     }
 

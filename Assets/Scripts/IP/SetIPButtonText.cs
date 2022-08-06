@@ -16,24 +16,29 @@ public class SetIPButtonText : MonoBehaviour
 
     ButtonConfigHelper buttonText;
 
-    public ROSConnection ros;
+    public ROSConnection m_Ros;
+
+    private void OnValidate()
+    {
+        buttonText = GetComponent<ButtonConfigHelper>();
+    }
 
     void Start()
     {
-        buttonText = GetComponent<ButtonConfigHelper>();
-        buttonText.MainLabelText = ros.RosIPAddress;
+        m_Ros = ROSConnection.GetOrCreateInstance();
+        buttonText.MainLabelText = m_Ros.RosIPAddress;
         checkedOnce = false;
     }
 
     void Update()
     {
         // If someone inputs a new ip address and presses enter, check if it connects successfully
-        if (!checkedOnce && ros.HasConnectionThread && !ros.HasConnectionError)
+        if (!checkedOnce && m_Ros.HasConnectionThread && !m_Ros.HasConnectionError)
         {
             checkedOnce = true;
             ConnectSuccess();
         }
-        else if(!checkedOnce && ros.HasConnectionError)
+        else if(!checkedOnce && m_Ros.HasConnectionError)
         {
             checkedOnce = false;
             ConnectFail(); 
@@ -47,12 +52,12 @@ public class SetIPButtonText : MonoBehaviour
 
     public void ConnectFail()
     {
-        buttonText.MainLabelText = string.Format("<color=red>{0}</color>", ros.RosIPAddress);
+        buttonText.MainLabelText = string.Format("<color=red>{0}</color>", m_Ros.RosIPAddress);
     }
 
     public void ConnectSuccess()
     {
-        buttonText.MainLabelText = string.Format("<color=green>{0}</color>", ros.RosIPAddress);
+        buttonText.MainLabelText = string.Format("<color=green>{0}</color>", m_Ros.RosIPAddress);
     }
 }
 
