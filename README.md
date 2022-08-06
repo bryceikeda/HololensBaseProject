@@ -5,7 +5,7 @@ Side Note: This also contains the scene called WSL2TestScene for testing the con
 
 BaseSceneWithMenu has the IP Address keypad and menu as shown in this [video](https://youtu.be/kmEVIafkqgM). If you would like to add the Keypad and Menu to your own project, follow the directions below. 
 
-![image](https://user-images.githubusercontent.com/56240638/156014478-0d91fe8c-5566-4ca9-ba6c-34011e104e39.png)
+![Figure1](https://user-images.githubusercontent.com/56240638/183230142-93677b87-8011-4477-aa2e-158c647c01f4.png)
 
 # Adding NumberPad and Menu to your own project
 ## Packages and Assets
